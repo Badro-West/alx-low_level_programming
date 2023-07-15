@@ -1,52 +1,4 @@
-
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-"3-array_range.c" [New File]                                                                                                                              0,#include "main.h"
+#include "main.h"
 
 /**
 * array_range - function that creates an array of integers.
@@ -73,5 +25,4 @@ int  *array_range(int min, int max)
 		rng[add] = (min + add);
 
 	return (rng);
-}0-1         All
-
+}
