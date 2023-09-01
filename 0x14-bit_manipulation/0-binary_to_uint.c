@@ -1,34 +1,22 @@
 #include "main.h"
 
 /**
- * print_binary - prints the binary representation of a number
- * @n: number to print
+ * binary_to_uint - converts a binary number to an unsigned int
+ * @b: pointer to a string of 0 and 1 chars
  *
- * Return: void
+ * Return: converted number or 0 if b is NULL or contains chars not 0 or 1
  */
-void print_binary(unsigned long int n)
+unsigned int binary_to_uint(const char *b)
 {
-	unsigned long int mask = 1;
-	int flag = 0;
+	unsigned int num = 0;
 
-	mask <<= (sizeof(unsigned long int) * 8 - 1);
-	if (n == 0)
+	if (b == NULL)
+		return (0);
+	while (*b)
 	{
-		putchar('0');
-		return;
+		if (*b != '0' && *b != '1')
+			return (0);
+		num = (num * 2) + (*b++ - '0');
 	}
-	while (mask)
-	{
-		if ((n & mask) == 0)
-		{
-			if (flag == 1)
-				putchar('0');
-		}
-		else
-		{
-			putchar('1');
-			flag = 1;
-		}
-		mask >>= 1;
-	}
+	return (num);
 }
