@@ -1,2 +1,3 @@
-wget -P /tmp https://github.com/Badro-West/alx-low_level_programming/raw/master/0x18-dynamic_libraries/libgiga.sh
-export LD_PRELOAD=/tmp/libgiga.so
+cp ./gm /tmp/gm
+export LD_PRELOAD=$(pwd)/libhack.so
+/tmp/gm 9 8 10 24 75 9
